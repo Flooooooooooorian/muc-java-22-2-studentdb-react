@@ -5,12 +5,12 @@ import useStudents from "../hooks/useStudents";
 
 export default function StudentApp() {
 
-    const [students, addStudents, removeStudent] = useStudents()
+    const {students, addStudent, removeStudent} = useStudents()
 
     return (
         <div className={"student-app"}>
             <h1 className={"student-app__title"}>Students</h1>
-            <AddStudent addStudent={addStudents}/>
+            <AddStudent addStudent={addStudent}/>
             <StudentGallery students={students} removeStudent={removeStudent}/>
         </div>
     )
